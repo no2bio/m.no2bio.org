@@ -1,6 +1,7 @@
 ##m.no2bio.org
+[![Feel free to fork the QR code too :)](https://raw.github.com/thedod/m.no2bio.org/master/html/img/qr-m.no2bio.png)](http://m.no2bio.org)
 
-The `html/` folder contains static files that are [more or less] what you see in the actual [**mobile portal**](http://m.no2bio.org).
+The `html/` folder contains static files that are [more or less] what you see in the actual [mobile portal](http://m.no2bio.org).
 At the moment, [bootstrap 3](http://getbootstrap.com/) is used, but feel free to use whatever responsive framework you have in mind. Go ahead. Dazzle us with something.
 
 ###Phase 1: Static html (easily doable now)
