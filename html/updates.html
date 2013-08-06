@@ -26,8 +26,13 @@
           <div class="nav-collapse collapse">
             <ul class="nav navbar-nav">
               <li><a href=".">בית</a></li>
-              <li class="active"><a href="#">עדכונים</a></li>
-              <li><a href="bloggers.html">דעות ברשת</a></li>
+              <li class="dropdown active">
+                  <a data-toggle="dropdown" href="#">עדכונים <b class="caret"></b></a>
+                  <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                    <li><a href="updates.html">מבזקי נו2ביו</a></li>
+                    <li class="active"><a href="bloggers.html">דעות ברשת</a></li>
+                  </ul>
+              </li>
               <li><a href="contact.html">צרו קשר</a></li>
             </ul>
             <ul class="nav navbar-nav pull-right">
@@ -38,7 +43,6 @@
           </div><!--/.nav-collapse -->
         </div>
       </div>
-
       <!-- Begin page content -->
       <div class="container">
         <p align="center"><iframe style="width:100%" width="300" height="9999" src="http://bloggers.no2bio.org/widget-archive/" frameborder="0" allowfullscreen></iframe></p>

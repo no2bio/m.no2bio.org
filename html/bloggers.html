@@ -13,7 +13,6 @@
   <body>
     <!-- Wrap all page content here -->
     <div id="wrap" dir="rtl">
-
       <!-- Fixed navbar -->
       <div class="navbar navbar-fixed-top">
         <div class="container">
@@ -26,8 +25,13 @@
           <div class="nav-collapse collapse">
             <ul class="nav navbar-nav">
               <li><a href=".">בית</a></li>
-              <li><a href="updates.html">עדכונים</a></li>
-              <li class="active"><a href="#">דעות ברשת</a></li>
+              <li class="dropdown active">
+                  <a data-toggle="dropdown" href="#">עדכונים <b class="caret"></b></a>
+                  <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                    <li><a href="updates.html">מבזקי נו2ביו</a></li>
+                    <li class="active"><a href="bloggers.html">דעות ברשת</a></li>
+                  </ul>
+              </li>
               <li><a href="contact.html">צרו קשר</a></li>
             </ul>
             <ul class="nav navbar-nav pull-right">
