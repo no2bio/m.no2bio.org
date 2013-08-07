@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>m.No2Bio - בית</title>
+    <title>m.No2Bio - מהו מאגר ביומטרי?</title>
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
     <link href="css/bootstrap.rtl.min.css" rel="stylesheet" media="screen">
-    <link href="css/sticky-footer-navbar.rtl.css" rel="stylesheet">
-  <!-- <style type="text/css">
+  <style type="text/css">
   body { padding-top: 50px; }
-  </style> -->
+  </style>
   </head>
   <body>
     <!-- Wrap all page content here -->
@@ -25,8 +24,8 @@
           <a class="navbar-brand" href=".">M.No2Bio</a>
           <div class="nav-collapse collapse">
             <ul class="nav navbar-nav">
-                  <li class="active"><a href="index.html">בית</a></li>
-                  <li class="dropdown">
+                  <li><a href="index.html">בית</a></li>
+                  <li class="dropdown active">
                       <a data-toggle="dropdown" href="#">לשאול<b class="caret"></b></a>
                       <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
                         
@@ -50,7 +49,7 @@
 
                           <li><a href="post-what-are-the-dangers.html">מה הן הסכנות הטמונות באגירת מידע?</a></li>
 
-                          <li><a href="post-what-is-bio-db.html">מהו מאגר ביומטרי?</a></li>
+                          <li class="active"><a href="post-what-is-bio-db.html">מהו מאגר ביומטרי?</a></li>
 
                           <li><a href="post-biometric-card.html">מהי תעודת זהות ביומטרית?</a></li>
                       </ul>
@@ -145,30 +144,34 @@
       </div>
 
       <!-- Begin page content -->
-      <div class="container visible-sm">
-        <div class="page-header text-center">
-          <img src="img/header280.png" width="280" height="41" border="0">
-        </div>
-        <p align="center"><iframe width="280" height="158" src="https://www.youtube-nocookie.com/embed/videoseries?list=PLJMShZxtd3i8irTstevAzkWtbZ7Krdz7W" frameborder="0" allowfullscreen></iframe></p>
-      </div>
-      <div class="container hidden-sm">
-        <div class="page-header text-center">
-          <img src="img/header560.png" width="560" height="82" border="0">
-        </div>
-        <p align="center"><iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/videoseries?list=PLJMShZxtd3i8irTstevAzkWtbZ7Krdz7W" frameborder="0" allowfullscreen></iframe></p>
-      </div>
-    </div>
-
-    <div id="footer">
       <div class="container">
-        <p class="text-muted credit" dir="rtl">
-זו גירסת אלפא. רוצים לתרום html/css/js? בואו
-<a target="_blank" href="https://github.com/thedod/m.no2bio.org">למזלג את זה</a>.
-        </p>
+        <div class="page-header text-center">
+          <div class="span12">
+            <h2>מהו מאגר ביומטרי?</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="span12">
+            <p dir="rtl">מאגר ביומטרי הוא מאגר מוחשב של נתונים ביומטריים (למשל טביעות אצבעות ותווי פנים). בניגוד ל<strong>תעודת זהות</strong> ביומטרית, שמגינה על הנתונים שבתוכה מפני דליפה, מאגר ביומטרי הוא אוסף דיגיטלי של הנתונים הללו, שנשמר באופן בר-חיפוש. מאגר כזה מאפשר <strong>זיהוי של אדם בלי צורך בתעודה, ללא הסכמתו ולפעמים גם ללא ידיעתו </strong>(למשל זיהוי אנשים שמופיעים בתמונות מהפגנות או ברשתות חברתיות).</p>
+<p dir="rtl">ההבדל בין מאגר של נתונים ביומטריים למאגר אחר, למשל של סיסמאות או של כרטיסי אשראי, הוא שסיסמה או כרטיס אשראי אפשר לבטל ולהחליף במקרה שהם דלפו, ואצבעות ותווי פנים לא. הנחת היסוד שעומדת בבסיס הקמת מאגר ביומטרי היא שלעולם לא תהיה דליפה שלו.</p>
+<p>&nbsp;</p>
+
+          </div>
+        </div>
       </div>
     </div>
 
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+<!--
+    <script type="text/javascript" src="js/jquery.browser.js"></script>
+    <script type="text/javascript" src="js/jquery.iframe-auto-height.plugin.js"></script>
+    <script type="text/javascript">
+      $(function() {
+        $('iframe').iframeAutoHeight();
+      });
+    </script>
+-->
   </body>
 </html>
+

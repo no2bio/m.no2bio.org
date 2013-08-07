@@ -1,0 +1,35 @@
+      <!-- Fixed navbar -->
+      <div class="navbar navbar-fixed-top">
+        <div class="container">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href=".">M.No2Bio</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav navbar-nav">
+              {{#items}}
+                {{^ismenu}}
+                  <li{{#active}} class="active"{{/active}}><a href="{{url}}">{{name}}</a></li>
+                {{/ismenu}}
+                {{#ismenu}}
+                  <li class="dropdown{{#active}} active{{/active}}">
+                      <a data-toggle="dropdown" href="#">{{name}}<b class="caret"></b></a>
+                      <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">{{! wtf is that dlabel? }}
+                        {{#items}}{{! assuming no nested submenus and categories }}
+                          <li{{#active}} class="active"{{/active}}><a href="{{url}}">{{name}}</a></li>
+                        {{/items}}
+                      </ul>
+                  </li>
+                {{/ismenu}}
+              {{/items}}
+            </ul>
+            <ul class="nav navbar-nav pull-right">
+              <li><a target="_blank" href="https://twitter.com/no2bio">טוויטר</a></li>
+              <li><a target="_blank" href="https://facebook.com/no2bio">פייסוש</a></li>
+              <li><a target="_blank" href="https://youtube.com/no2bioisrael">יוטיוב</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
