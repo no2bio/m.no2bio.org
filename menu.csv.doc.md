@@ -16,7 +16,7 @@ Displayed as the menu item's text. Most probably Hebrew.
 ####type
 One of the following options:
 * *homepage* - Generate `id`.html (`id` would probably be "index") from the "homepage" template (hard-wired html, depends on events etc.).
-* *iframe* - Generate `id`.html (`id` would probably be "index") from the "iframe" template. `arg` (see below) is iframe's src.
+* *iframe* - Generate `id`.html from the "iframe" template. `arg` (see below) is iframe's src.
 * *submenu* - Menu items defined *later* in the csv file can use this item's `id` as the `parent` (see below).
 * *category* - Get a catageory from the blogs Api, generate an entire submenu, and the actual html pages. `arg` (see below) is slug of post to appear first on the menu.
 

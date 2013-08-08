@@ -6,7 +6,7 @@ The html files inside it were generated with `make-m.py` (see below), but if you
 
 At the moment, [bootstrap 3](http://getbootstrap.com/) is used, but feel free to use whatever responsive framework you have in mind. Go ahead. Dazzle us with something exotic.
 
-**Even if your design doesn't become out "mainstream" theme, it may end up as an unofficial theme on our site, so don't hesitate to suggest something "too wild"**
+**Even if your design doesn't become our "mainstream" theme, it may end up as an unofficial theme on our site, so don't hesitate to suggest something "too wild"**
 
 ###Generating html from templates [optional]
 * First time, do `git submodule update --init`. This would fetch [pystache](https://github.com/defunkt/pystache), python library for [mustache](http://mustache.github.io/) templates.
