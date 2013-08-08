@@ -1,3 +1,3 @@
-[submodule "pystache"]
-	path = pystache
+[submodule "python-mustache"]
+	path = python-mustache
 	url = https://github.com/defunkt/pystache.git
