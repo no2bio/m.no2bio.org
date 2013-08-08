@@ -2,6 +2,7 @@ CSV_FILENAME = 'menu.csv'
 API_URL = 'http://no2bio.org/api'
 OUTPUT_DIR = 'html'
 TEMPLATE_DIR = 'templates'
+ITEM_FILTER_FILE = 'item-filter.json'
 import csv,json,urllib2,logging
 
 logging.basicConfig(level=logging.DEBUG) # maybe do syslog, mail, or something fancier later on
@@ -10,6 +11,8 @@ logger=logging.getLogger('make-m')
 import pystache
 stache = pystache.Renderer(
     search_dirs=TEMPLATE_DIR,file_encoding='utf-8',string_encoding='utf-8',file_extension='html')
+
+item_filter = json.load(file(ITEM_FILTER_FILE))
 
 from HTMLParser import HTMLParser
 htmlparser = HTMLParser()
@@ -65,8 +68,9 @@ def make_menu(csv_filename=CSV_FILENAME):
         if item['type']=='category':
             item['ismenu'] = True # mustache needs this
             cat = _load_category(item['id'])
-            first = filter(lambda x: x['slug']==item['arg'],cat['posts'])
-            rest = filter(lambda x: x['slug']!=item['arg'],cat['posts'])
+            posts = filter(lambda x:not x['slug'] in item_filter['ignore-slugs'],cat['posts'])
+            first = filter(lambda x: x['slug']==item['arg'],posts)
+            rest = filter(lambda x: x['slug']!=item['arg'],posts)
             posts = first+sorted(rest,key=lambda x:x['title'])
             item['items'] = [{
               'id':p['slug'],
