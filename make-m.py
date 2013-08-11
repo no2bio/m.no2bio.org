@@ -3,7 +3,8 @@ API_URL = 'http://no2bio.org/api'
 OUTPUT_DIR = 'html'
 TEMPLATE_DIR = 'templates'
 ITEM_FILTER_FILE = 'item-filter.json'
-import csv,json,urllib2,logging
+import csv,json,urllib2,re,logging
+
 
 logging.basicConfig(level=logging.DEBUG) # maybe do syslog, mail, or something fancier later on
 logger=logging.getLogger('make-m')
@@ -18,6 +19,15 @@ from HTMLParser import HTMLParser
 htmlparser = HTMLParser()
 def unescape(s):
     return htmlparser.unescape(s).encode('utf-8')
+
+RE_POST_URL = re.compile('"http://no2bio.org/([^/".]*)/?"')
+def _post_url_handler(m):
+    slug = m.group(1)
+    if slug in item_filter['no-url-conversion']:
+        return '"{0}.html"'.format(slug)
+    return '"post-{0}.html"'.format(slug)
+def _tweak_post_urls(s):
+    return RE_POST_URL.sub(_post_url_handler,s)
 
 def _make_item(keys,row):
     item = {}
@@ -89,6 +99,7 @@ def render_posts(menu,categories):
     for cat in categories:
         for post in categories[cat]:
             post['title']=unescape(post['title'])
+            post['content']=_tweak_post_urls(post['content'])
             current = _item_by_id(menu,post['slug'])
             hilite_menu(menu,current['path'])
             menuhtml = stache.render(stache.load_template('menu'),menu).encode('utf-8')
